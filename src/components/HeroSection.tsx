@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 pt-32">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <div className="space-y-4">
