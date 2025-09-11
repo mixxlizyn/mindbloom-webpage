@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom psychology theme colors
+        healing: {
+          DEFAULT: "hsl(var(--healing))",
+          light: "hsl(var(--healing-light))",
+        },
+        warmth: {
+          DEFAULT: "hsl(var(--warmth))",
+          light: "hsl(var(--warmth-light))",
+        },
+        calm: {
+          DEFAULT: "hsl(var(--calm))",
+          light: "hsl(var(--calm-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
