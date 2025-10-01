@@ -45,8 +45,8 @@ All colors MUST be HSL.
     --gradient-soft: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 10px 40px -10px hsl(var(--healing) / 0.2);
-    --shadow-card: 0 4px 20px -4px hsl(210 15% 20% / 0.1);
+    --shadow-soft: 0 10px 40px -10px hsl(var(--burgundy) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(350 60% 45% / 0.15);
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

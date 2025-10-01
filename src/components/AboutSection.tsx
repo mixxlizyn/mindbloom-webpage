@@ -8,7 +8,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">Обо</span>{" "}
-            <span className="bg-gradient-to-r from-healing to-warmth bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-burgundy to-healing bg-clip-text text-transparent">
               мне
             </span>
           </h2>
@@ -43,26 +43,29 @@ const AboutSection = () => {
               </div>
             </Card>
 
-            <Card className="p-6 bg-gradient-to-br from-warmth-light to-healing-light border-0">
-              <h3 className="text-2xl font-semibold mb-4 text-warmth">Сертификаты</h3>
+            <Card className="p-6 bg-gradient-to-br from-burgundy-light to-healing-light border-0">
+              <h3 className="text-2xl font-semibold mb-4 text-burgundy">Сертификаты</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-warmth rounded-full"></div>
+                  <div className="w-2 h-2 bg-burgundy rounded-full"></div>
                   Песочная терапия (международный сертификат)
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-warmth rounded-full"></div>
+                  <div className="w-2 h-2 bg-burgundy rounded-full"></div>
                   ДПДГ терапия (EMDR International Association)
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-warmth rounded-full"></div>
+                  <div className="w-2 h-2 bg-burgundy rounded-full"></div>
                   Телесно-ориентированная терапия
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-warmth rounded-full"></div>
+                  <div className="w-2 h-2 bg-burgundy rounded-full"></div>
                   Групповая терапия и фасилитация
                 </li>
               </ul>
+              <p className="text-xs text-muted-foreground mt-4 italic">
+                💬 Все сертификаты можно посмотреть в Телеграм
+              </p>
             </Card>
           </div>
 
@@ -79,12 +82,12 @@ const AboutSection = () => {
             </Card>
 
             <div className="grid grid-cols-2 gap-4">
-              <Card className="p-4 text-center bg-gradient-to-br from-healing-light to-transparent">
-                <div className="text-2xl font-bold text-healing mb-1">Индивидуальный</div>
+              <Card className="p-4 text-center bg-gradient-to-br from-burgundy-light to-transparent">
+                <div className="text-2xl font-bold text-burgundy mb-1">Индивидуальный</div>
                 <div className="text-sm text-muted-foreground">подход</div>
               </Card>
-              <Card className="p-4 text-center bg-gradient-to-br from-warmth-light to-transparent">
-                <div className="text-2xl font-bold text-warmth mb-1">Безопасное</div>
+              <Card className="p-4 text-center bg-gradient-to-br from-healing-light to-transparent">
+                <div className="text-2xl font-bold text-healing mb-1">Безопасное</div>
                 <div className="text-sm text-muted-foreground">пространство</div>
               </Card>
             </div>

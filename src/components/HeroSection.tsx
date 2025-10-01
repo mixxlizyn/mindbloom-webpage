@@ -19,7 +19,7 @@ const HeroSection = () => {
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               <span className="text-foreground">Путь к</span>{" "}
-              <span className="bg-gradient-to-r from-healing to-calm bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-burgundy via-healing to-calm bg-clip-text text-transparent">
                 исцелению
               </span>
             </h1>
@@ -33,7 +33,7 @@ const HeroSection = () => {
             <Button 
               onClick={openWhatsApp}
               size="lg"
-              className="bg-gradient-to-r from-healing to-calm hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-burgundy to-healing hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp
@@ -42,7 +42,7 @@ const HeroSection = () => {
               onClick={openTelegram}
               variant="outline"
               size="lg"
-              className="border-healing text-healing hover:bg-healing-light transition-all duration-300 hover:scale-105"
+              className="border-burgundy text-burgundy hover:bg-burgundy-light transition-all duration-300 hover:scale-105"
             >
               <Phone className="mr-2 h-5 w-5" />
               Telegram
@@ -51,16 +51,16 @@ const HeroSection = () => {
 
           <div className="grid grid-cols-3 gap-6 pt-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-healing">7+</div>
+              <div className="text-3xl font-bold text-burgundy">7+</div>
               <div className="text-sm text-muted-foreground">лет опыта</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-healing">500+</div>
+              <div className="text-3xl font-bold text-burgundy">500+</div>
               <div className="text-sm text-muted-foreground">клиентов</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-healing">4</div>
-              <div className="text-sm text-muted-foreground">направления</div>
+              <div className="text-3xl font-bold text-burgundy">10</div>
+              <div className="text-sm text-muted-foreground">направлений</div>
             </div>
           </div>
         </div>
@@ -75,8 +75,8 @@ const HeroSection = () => {
               />
             </div>
           </Card>
-          <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-healing-light to-calm-light rounded-full opacity-70 blur-xl"></div>
-          <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-warmth-light to-healing-light rounded-full opacity-50 blur-lg"></div>
+          <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-burgundy-light to-healing-light rounded-full opacity-70 blur-xl"></div>
+          <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-burgundy-light to-calm-light rounded-full opacity-50 blur-lg"></div>
         </div>
       </div>
     </section>

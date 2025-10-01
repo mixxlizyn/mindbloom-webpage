@@ -79,6 +79,14 @@ const ServicesSection = () => {
       duration: "120 минут",
       price: "от 2500 ₽",
       color: "burgundy"
+    },
+    {
+      title: "Холистический массаж",
+      description: "Комплексный подход к телу и душе. Работа с энергетическими центрами и снятие физических и эмоциональных блоков через прикосновение.",
+      image: bodyTherapy,
+      duration: "90 минут",
+      price: "от 4500 ₽",
+      color: "burgundy"
     }
   ];
 
