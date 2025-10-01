@@ -38,7 +38,47 @@ const ServicesSection = () => {
       image: groupTherapy,
       duration: "120 минут",
       price: "от 2000 ₽",
+      color: "burgundy"
+    },
+    {
+      title: "Трансформационные игры",
+      description: "Игровые практики для глубинной трансформации и осознания жизненных паттернов. Раскрытие внутреннего потенциала через метафорический процесс.",
+      image: sandboxTherapy,
+      duration: "180 минут",
+      price: "от 3000 ₽",
       color: "healing"
+    },
+    {
+      title: "Я мама",
+      description: "Работа с отношениями мамы и ребёнка. Понимание потребностей, выстраивание здоровых границ и гармоничных отношений в семье.",
+      image: groupTherapy,
+      duration: "60 минут",
+      price: "от 3500 ₽",
+      color: "warmth"
+    },
+    {
+      title: "Психосоматика",
+      description: "Исследование связи между эмоциями и телесными проявлениями. Работа с психосоматическими симптомами через осознание глубинных причин.",
+      image: bodyTherapy,
+      duration: "90 минут",
+      price: "от 4000 ₽",
+      color: "burgundy"
+    },
+    {
+      title: "Энергия рода",
+      description: "Работа с родовыми сценариями и семейными системами. Освобождение от негативных родовых программ и восстановление связи с предками.",
+      image: emdrTherapy,
+      duration: "90 минут",
+      price: "от 4500 ₽",
+      color: "calm"
+    },
+    {
+      title: "Мастер-класс: Народная кукла",
+      description: "Творческий процесс изготовления народной куклы как терапевтическая практика. Погружение в традиции и работа с личными смыслами.",
+      image: sandboxTherapy,
+      duration: "120 минут",
+      price: "от 2500 ₽",
+      color: "burgundy"
     }
   ];
 
@@ -52,7 +92,7 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">Мои</span>{" "}
-            <span className="bg-gradient-to-r from-healing to-calm bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-healing to-burgundy bg-clip-text text-transparent">
               услуги
             </span>
           </h2>
@@ -61,7 +101,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index}
@@ -113,7 +153,7 @@ const ServicesSection = () => {
             <Button 
               onClick={openWhatsApp}
               size="lg"
-              className="bg-gradient-to-r from-healing to-calm hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-healing to-burgundy hover:shadow-lg transition-all duration-300"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Записаться на знакомство

@@ -36,10 +36,12 @@ All colors MUST be HSL.
     --warmth-light: 35 35% 90%;
     --calm: 210 25% 65%;
     --calm-light: 210 20% 92%;
+    --burgundy: 350 60% 45%;
+    --burgundy-light: 350 40% 92%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--healing)) 0%, hsl(var(--calm)) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(var(--warmth)) 0%, hsl(var(--healing)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--healing)) 0%, hsl(var(--burgundy)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--warmth)) 0%, hsl(var(--burgundy)) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     
     /* Shadows */

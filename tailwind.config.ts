@@ -60,6 +60,10 @@ export default {
           DEFAULT: "hsl(var(--calm))",
           light: "hsl(var(--calm-light))",
         },
+        burgundy: {
+          DEFAULT: "hsl(var(--burgundy))",
+          light: "hsl(var(--burgundy-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
