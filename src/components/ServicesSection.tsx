@@ -101,13 +101,13 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="overflow-hidden group hover:shadow-xl transition-all duration-500 hover:scale-105 bg-card"
+              className="overflow-hidden group hover:shadow-xl transition-all duration-500 hover:scale-105 bg-card flex flex-col h-full"
             >
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -115,30 +115,29 @@ const ServicesSection = () => {
                 />
               </div>
               
-              <div className="p-6 space-y-4">
-                <div className="flex justify-between items-start">
-                  <h3 className={`text-2xl font-semibold text-${service.color}`}>
+              <div className="p-5 flex flex-col flex-grow">
+                <div className="flex justify-between items-start gap-3 mb-3">
+                  <h3 className={`text-xl font-semibold text-${service.color} leading-tight`}>
                     {service.title}
                   </h3>
-                  <div className="text-right">
-                    <div className="text-sm text-muted-foreground">{service.duration}</div>
-                    <div className="font-semibold text-healing">{service.price}</div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="text-xs text-muted-foreground whitespace-nowrap">{service.duration}</div>
+                    <div className="font-semibold text-healing text-sm whitespace-nowrap">{service.price}</div>
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-grow line-clamp-4">
                   {service.description}
                 </p>
                 
-                <div className="pt-2">
-                  <Button 
-                    onClick={openWhatsApp}
-                    className={`w-full bg-gradient-to-r from-${service.color} to-${service.color === 'healing' ? 'calm' : 'healing'} hover:shadow-lg transition-all duration-300`}
-                  >
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    Записаться на сессию
-                  </Button>
-                </div>
+                <Button 
+                  onClick={openWhatsApp}
+                  className={`w-full bg-gradient-to-r from-${service.color} to-${service.color === 'healing' ? 'calm' : 'healing'} hover:shadow-lg transition-all duration-300 mt-auto`}
+                  size="sm"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Записаться
+                </Button>
               </div>
             </Card>
           ))}
