@@ -7,10 +7,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { href: '#about', label: 'О себе' },
-    { href: '#services', label: 'Услуги' },
-    { href: '#testimonials', label: 'Отзывы' },
-    { href: '#contact', label: 'Контакты' },
+    { href: '#about', label: 'О себе', isAnchor: true },
+    { href: '#services', label: 'Услуги', isAnchor: true },
+    { href: '/club-meetings', label: 'Клубные встречи', isAnchor: false },
+    { href: '#testimonials', label: 'Отзывы', isAnchor: true },
+    { href: '#contact', label: 'Контакты', isAnchor: true },
   ];
 
   useEffect(() => {
@@ -21,11 +22,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, isAnchor: boolean) => {
     setIsMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (isAnchor) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = href;
     }
   };
 
@@ -45,7 +50,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => handleNavClick(item.href)}
+                onClick={() => handleNavClick(item.href, item.isAnchor)}
                 className="text-foreground/80 hover:text-primary transition-colors cursor-pointer"
               >
                 {item.label}
@@ -85,7 +90,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => handleNavClick(item.href)}
+                  onClick={() => handleNavClick(item.href, item.isAnchor)}
                   className="text-left text-foreground/80 hover:text-primary transition-colors px-4 py-2"
                 >
                   {item.label}
