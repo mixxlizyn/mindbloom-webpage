@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Phone, MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { href: '#about', label: 'О себе', isAnchor: true },
-    { href: '#services', label: 'Услуги', isAnchor: true },
-    { href: '/club-meetings', label: 'Клубные встречи', isAnchor: false },
-    { href: '#testimonials', label: 'Отзывы', isAnchor: true },
-    { href: '#contact', label: 'Контакты', isAnchor: true },
+    { href: "#about", label: "О себе", isAnchor: true },
+    { href: "#services", label: "Услуги", isAnchor: true },
+    // { href: '/club-meetings', label: 'Клубные встречи', isAnchor: false },
+    { href: "#testimonials", label: "Отзывы", isAnchor: true },
+    { href: "#contact", label: "Контакты", isAnchor: true },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href: string, isAnchor: boolean) => {
@@ -27,7 +27,7 @@ const Header = () => {
     if (isAnchor) {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
       window.location.href = href;
@@ -35,15 +35,17 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md border-b shadow-sm' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-primary">
-            Психолог
-          </div>
+          <div className="text-2xl font-bold text-primary">Психолог</div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -61,7 +63,11 @@ const Header = () => {
           {/* Contact Buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <Button size="sm" variant="outline" asChild>
-              <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://wa.me/your-number"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
               </a>
@@ -79,7 +85,11 @@ const Header = () => {
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -98,7 +108,11 @@ const Header = () => {
               ))}
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t">
                 <Button size="sm" variant="outline" asChild>
-                  <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://wa.me/your-number"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp
                   </a>

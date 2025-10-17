@@ -24,13 +24,13 @@ const HeroSection = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Профессиональная психологическая помощь с индивидуальным подходом. 
+              Профессиональная психологическая помощь с индивидуальным подходом.
               Помогаю найти внутренние ресурсы и обрести гармонию с собой.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
+            <Button
               onClick={openWhatsApp}
               size="lg"
               className="bg-gradient-to-r from-burgundy to-healing hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -38,7 +38,7 @@ const HeroSection = () => {
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp
             </Button>
-            <Button 
+            <Button
               onClick={openTelegram}
               variant="outline"
               size="lg"
@@ -51,13 +51,13 @@ const HeroSection = () => {
 
           <div className="grid grid-cols-3 gap-6 pt-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-burgundy">7+</div>
+              <div className="text-3xl font-bold text-burgundy">5+</div>
               <div className="text-sm text-muted-foreground">лет опыта</div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-3xl font-bold text-burgundy">500+</div>
               <div className="text-sm text-muted-foreground">клиентов</div>
-            </div>
+            </div> */}
             <div className="text-center">
               <div className="text-3xl font-bold text-burgundy">10</div>
               <div className="text-sm text-muted-foreground">направлений</div>
